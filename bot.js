@@ -1,6 +1,8 @@
 const TelegramBot = require("node-telegram-bot-api");
+require("dotenv").config();
+
 const Posts = [];
-const token = "ADD YOUR BOT TOKEN HERE";
+const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 const EthioMart = "@ethiooomart";
 const HabeshaMart = "@ethioomart2";
